@@ -1,82 +1,37 @@
-# Lightweight React Template for KAVIA
+# Quick Notes Frontend (React + Rose Gold Theme)
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+Elegant, responsive notes app with Supabase-ready persistence.
 
-## Features
+## Setup
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+1) Install dependencies
+   npm install
 
-## Getting Started
+2) Start development server
+   npm start
+   Open http://localhost:3000
 
-In the project directory, you can run:
+3) Optional: Supabase persistence
+   Create a .env in this folder with:
+   REACT_APP_SUPABASE_URL=<your-supabase-url>
+   REACT_APP_SUPABASE_KEY=<your-anon-key>
 
-### `npm start`
+If Supabase env vars are not present, the app uses localStorage.
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Environment variables recognized:
+- REACT_APP_SUPABASE_URL
+- REACT_APP_SUPABASE_KEY
+- REACT_APP_NODE_ENV (optional label)
 
-### `npm test`
+## Scripts
 
-Launches the test runner in interactive watch mode.
+- npm start
+- npm test
+- npm run build
 
-### `npm run build`
+## Notes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- UI components are built with accessible HTML and pure CSS under theme.css.
+- Notes service is abstracted at src/services/notesService.js for quick swap-in of Supabase.
 
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
-
-### Components
-
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
-
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For more details see QUICK_NOTES_README.md.
